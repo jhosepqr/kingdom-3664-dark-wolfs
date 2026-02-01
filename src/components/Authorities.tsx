@@ -14,28 +14,28 @@ const Authorities: FC = () => {
 
   const council = [
     {
-      role: t('council.leadership'),
+      role: t("council.leadership"),
       members: ["BADO", "YÜZBAŞI"],
       icon: ShieldCheck,
-      desc: t('council.leadership_desc'),
+      desc: t("council.leadership_desc"),
     },
     {
-      role: t('council.the_council'),
+      role: t("council.the_council"),
       members: ["HAKAN", "CROM", "BARBA"],
       icon: MessageSquare,
-      desc: t('council.the_council_desc'),
+      desc: t("council.the_council_desc"),
     },
     {
-      role: t('council.war_strategy'),
+      role: t("council.war_strategy"),
       members: ["Elite Tacticians"],
       icon: Sword,
-      desc: t('council.war_strategy_desc'),
+      desc: t("council.war_strategy_desc"),
     },
     {
-      role: t('council.logistics'),
+      role: t("council.logistics"),
       members: ["Support Team"],
       icon: Calendar,
-      desc: t('council.logistics_desc'),
+      desc: t("council.logistics_desc"),
     },
   ];
 
@@ -51,11 +51,11 @@ const Authorities: FC = () => {
           <h2 className="text-3xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
             THE{" "}
             <span className="text-royalGold gold-glow underline decoration-neonCyan/30 underline-offset-4">
-              {t('council.title').replace('THE ', '')}
+              {t("council.title").replace("THE ", "")}
             </span>
           </h2>
           <p className="text-slate-400 mt-4 uppercase text-sm tracking-widest">
-            {t('council.subtitle')}
+            {t("council.subtitle")}
           </p>
         </motion.div>
 
@@ -103,11 +103,11 @@ const Authorities: FC = () => {
           className="mt-20 flex flex-col items-center"
         >
           <button className="flex items-center gap-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold py-5 px-12 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1 hover:shadow-indigo-500/50 uppercase tracking-widest text-lg">
-            {t('council.discord')}
+            {t("council.discord")}
             <ExternalLink className="w-6 h-6" />
           </button>
           <p className="mt-6 text-slate-500 text-xs tracking-widest uppercase">
-            {t('council.copyright')}
+            {t("council.copyright")}
           </p>
         </motion.div>
       </div>

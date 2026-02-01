@@ -9,29 +9,29 @@ const Stats: FC = () => {
   const statsData = [
     {
       icon: Shield,
-      label: t('stats.power'),
+      label: t("stats.power"),
       value: "+5,183M",
       color: "text-neonCyan",
       shadow: "shadow-neonCyan/20",
     },
     {
       icon: Trophy,
-      label: t('stats.kvk4'),
-      value: t('stats.kvk4_val'),
+      label: t("stats.kvk4"),
+      value: t("stats.kvk4_val"),
       color: "text-royalGold",
       shadow: "shadow-royalGold/20",
     },
     {
       icon: Star,
-      label: t('stats.kvk5'),
-      value: t('stats.kvk5_val'),
+      label: t("stats.kvk5"),
+      value: t("stats.kvk5_val"),
       color: "text-neonCyan",
       shadow: "shadow-neonCyan/20",
     },
     {
       icon: Users,
-      label: t('stats.migration'),
-      value: t('stats.open'),
+      label: t("stats.migration"),
+      value: t("stats.open"),
       color: "text-red-500",
       shadow: "shadow-red-500/20",
     },
@@ -47,7 +47,7 @@ const Stats: FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold italic text-royalGold gold-glow uppercase tracking-widest">
-            {t('stats.title')}
+            {t("stats.title")}
           </h2>
           <div className="w-24 h-1 bg-royalGold mx-auto mt-4 rounded-full shadow-[0_0_10px_rgba(212, 175, 55, 0.5)]"></div>
         </motion.div>
@@ -73,9 +73,9 @@ const Stats: FC = () => {
                 {stat.value}
               </span>
               <p className="text-[10px] mt-2 text-slate-500 uppercase">
-                {stat.label === t('stats.migration')
-                  ? t('stats.heavy')
-                  : t('stats.gift')}
+                {stat.label === t("stats.migration")
+                  ? t("stats.heavy")
+                  : t("stats.gift")}
               </p>
             </motion.div>
           ))}

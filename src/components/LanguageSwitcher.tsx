@@ -1,21 +1,23 @@
-import type { FC } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Globe } from 'lucide-react';
-import { useState } from 'react';
+import type { FC } from "react";
+import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
+import { Globe } from "lucide-react";
+import { useState } from "react";
 
 const LanguageSwitcher: FC = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
-    { code: 'ru', label: 'Русский', flag: '🇷🇺' }
+    { code: "en", label: "English", flag: "🇬🇧" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
+    { code: "tr", label: "Türkçe", flag: "🇹🇷" },
+    { code: "ru", label: "Русский", flag: "🇷🇺" },
   ];
 
-  const currentLang = languages.find(l => l.code === i18n.language.split('-')[0]) || languages[0];
+  const currentLang =
+    languages.find((l) => l.code === i18n.language.split("-")[0]) ||
+    languages[0];
 
   return (
     <div className="fixed top-6 right-6 z-[100]">
@@ -27,7 +29,9 @@ const LanguageSwitcher: FC = () => {
           className="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-white hover:border-neonCyan/50 transition-colors shadow-lg"
         >
           <Globe className="w-4 h-4 text-neonCyan" />
-          <span className="text-sm font-bold uppercase tracking-widest">{currentLang.code}</span>
+          <span className="text-sm font-bold uppercase tracking-widest">
+            {currentLang.code}
+          </span>
         </motion.button>
 
         <AnimatePresence>
@@ -46,7 +50,9 @@ const LanguageSwitcher: FC = () => {
                     setIsOpen(false);
                   }}
                   className={`w-full flex items-center gap-3 px-4 py-3 text-left text-sm hover:bg-white/10 transition-colors ${
-                    i18n.language.startsWith(lang.code) ? 'text-neonCyan font-bold' : 'text-slate-300'
+                    i18n.language.startsWith(lang.code)
+                      ? "text-neonCyan font-bold"
+                      : "text-slate-300"
                   }`}
                 >
                   <span className="text-lg">{lang.flag}</span>

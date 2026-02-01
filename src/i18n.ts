@@ -1,6 +1,6 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 const resources = {
   en: {
@@ -8,8 +8,9 @@ const resources = {
       hero: {
         title: "DARK WOLFS",
         subtitle: "KINGDOM 3664 • DOMINANCE & LOYALTY",
-        description: "The most disciplined alliance in M3664. We fight with honor, we win with strategy. Join the elite.",
-        cta: "APPLY FOR MIGRATION"
+        description:
+          "The most disciplined alliance in M3664. We fight with honor, we win with strategy. Join the elite.",
+        cta: "APPLY FOR MIGRATION",
       },
       stats: {
         title: "(THE PROOF OF POWER)",
@@ -21,7 +22,7 @@ const resources = {
         heavy: "Heavy Fighters Only",
         kvk4_val: "Royal Triumph",
         kvk5_val: "Star Dominance",
-        open: "OPEN (T5/ACTIVE)"
+        open: "OPEN (T5/ACTIVE)",
       },
       council: {
         title: "THE IRON COUNCIL",
@@ -35,17 +36,18 @@ const resources = {
         logistics: "Events & Logistics",
         logistics_desc: "Reward management and operations",
         discord: "JOIN OFFICIAL DISCORD",
-        copyright: "© Kingdom 3664 • Dark Wolfs Dominion"
-      }
-    }
+        copyright: "© Kingdom 3664 • Dark Wolfs Dominion",
+      },
+    },
   },
   es: {
     translation: {
       hero: {
         title: "DARK WOLFS",
         subtitle: "REINO 3664 • DOMINIO Y LEALTAD",
-        description: "La alianza más disciplinada de M3664. Luchamos con honor, ganamos con estrategia. Únete a la élite.",
-        cta: "SOLICITAR MIGRACIÓN"
+        description:
+          "La alianza más disciplinada de M3664. Luchamos con honor, ganamos con estrategia. Únete a la élite.",
+        cta: "SOLICITAR MIGRACIÓN",
       },
       stats: {
         title: "(LA PRUEBA DEL PODER)",
@@ -57,7 +59,7 @@ const resources = {
         heavy: "Solo Guerreros Activos",
         kvk4_val: "Triunfo Real",
         kvk5_val: "Dominación Star",
-        open: "ABIERTA (T5/ACTIVO)"
+        open: "ABIERTA (T5/ACTIVO)",
       },
       council: {
         title: "EL CONSEJO DE HIERRO",
@@ -71,17 +73,18 @@ const resources = {
         logistics: "Eventos y Logística",
         logistics_desc: "Gestión de recompensas y operatividad",
         discord: "ÚNETE AL DISCORD OFICIAL",
-        copyright: "© Reino 3664 • Dominio Dark Wolfs"
-      }
-    }
+        copyright: "© Reino 3664 • Dominio Dark Wolfs",
+      },
+    },
   },
   tr: {
     translation: {
       hero: {
         title: "DARK WOLFS",
         subtitle: "KRALLIK 3664 • HAKIMIYET VE SADAKAT",
-        description: "M3664'ün en disiplinli ittifakı. Onurumuzla savaşır, stratejimizle kazanırız. Seçkinlere katılın.",
-        cta: "GÖÇ BAŞVURUSU YAP"
+        description:
+          "M3664'ün en disiplinli ittifakı. Onurumuzla savaşır, stratejimizle kazanırız. Seçkinlere katılın.",
+        cta: "GÖÇ BAŞVURUSU YAP",
       },
       stats: {
         title: "(GÜCÜN KANITI)",
@@ -93,7 +96,7 @@ const resources = {
         heavy: "Sadece Aktif Savaşçılar",
         kvk4_val: "Kraliyet Zaferi",
         kvk5_val: "Yıldız Hakimiyeti",
-        open: "AÇIK (T5/AKTIF)"
+        open: "AÇIK (T5/AKTIF)",
       },
       council: {
         title: "DEMİR KONSEYİ",
@@ -107,17 +110,18 @@ const resources = {
         logistics: "Etkinlikler ve Lojistik",
         logistics_desc: "Ödül yönetimi ve operasyonlar",
         discord: "RESMİ DISCORD'A KATIL",
-        copyright: "© Krallık 3664 • Dark Wolfs Hakimiyeti"
-      }
-    }
+        copyright: "© Krallık 3664 • Dark Wolfs Hakimiyeti",
+      },
+    },
   },
   ru: {
     translation: {
       hero: {
         title: "DARK WOLFS",
         subtitle: "КОРОЛЕВСТВО 3664 • ГОСПОДСТВО И ВЕРНОСТЬ",
-        description: "Самый дисциплинированный альянс в M3664. Мы сражаемся с честью, мы побеждаем со стратегией. Присоединяйтесь к элите.",
-        cta: "ПОДАТЬ ЗАЯВКУ НА МИГРАЦИЮ"
+        description:
+          "Самый дисциплинированный альянс в M3664. Мы сражаемся с честью, мы побеждаем со стратегией. Присоединяйтесь к элите.",
+        cta: "ПОДАТЬ ЗАЯВКУ НА МИГРАЦИЮ",
       },
       stats: {
         title: "(ДОКАЗАТЕЛЬСТВО СИЛЫ)",
@@ -129,7 +133,7 @@ const resources = {
         heavy: "Только для активных бойцов",
         kvk4_val: "Королевский триумф",
         kvk5_val: "Звездное господство",
-        open: "ОТКРЫТО (T5/АКТИВ)"
+        open: "ОТКРЫТО (T5/АКТИВ)",
       },
       council: {
         title: "ЖЕЛЕЗНЫЙ СОВЕТ",
@@ -143,10 +147,10 @@ const resources = {
         logistics: "События и логистика",
         logistics_desc: "Управление наградами и операциями",
         discord: "ВСТУПИТЬ В ОФИЦИАЛЬНЫЙ DISCORD",
-        copyright: "© Королевство 3664 • Владения Dark Wolfs"
-      }
-    }
-  }
+        copyright: "© Королевство 3664 • Владения Dark Wolfs",
+      },
+    },
+  },
 };
 
 i18n
@@ -154,10 +158,10 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    fallbackLng: "en",
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;
