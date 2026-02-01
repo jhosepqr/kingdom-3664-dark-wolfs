@@ -1,7 +1,10 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Hero: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-20 pb-10 px-4">
       <motion.div
@@ -24,20 +27,15 @@ const Hero: FC = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-center max-w-4xl"
       >
-        <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter italic">
-          <span className="text-white">KINGDOM 3664:</span> <br />
-          <span className="text-neonCyan neon-glow underline decoration-royalGold/50 underline-offset-8">
-            THE DARK WOLFS DOMINION
+        <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter italic lg:leading-[1.1]">
+          <span className="text-white">ARK WOLFS</span> <br />
+          <span className="text-neonCyan neon-glow underline decoration-royalGold/50 underline-offset-8 uppercase leading-normal">
+            {t('hero.subtitle')}
           </span>
         </h1>
 
         <p className="text-lg md:text-2xl text-slate-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed italic">
-          "Una hermandad forjada en el fuego de la traición y bautizada en la
-          gloria de la victoria. <br />
-          <span className="text-royalGold">
-            No aceptamos menos que la excelencia.
-          </span>
-          "
+          "{t('hero.description')}"
         </p>
 
         <motion.button
@@ -53,7 +51,7 @@ const Hero: FC = () => {
           whileTap={{ scale: 0.95 }}
           className="bg-royalGold text-dark font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_15px_rgba(212, 175, 55, 0.2)] transition-all uppercase tracking-widest border-2 border-royalGold hover:bg-transparent hover:text-royalGold"
         >
-          SOLICITAR MIGRACIÓN
+          {t('hero.cta')}
         </motion.button>
       </motion.div>
     </section>

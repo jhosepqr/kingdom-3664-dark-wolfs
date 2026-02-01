@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   ShieldCheck,
   MessageSquare,
@@ -8,34 +9,36 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const council = [
-  {
-    role: "Liderazgo",
-    members: ["BADO", "YÜZBAŞI"],
-    icon: ShieldCheck,
-    desc: "M3664 Lead & Dirección General.",
-  },
-  {
-    role: "El Consejo",
-    members: ["HAKAN", "CROM", "BARBA"],
-    icon: MessageSquare,
-    desc: "R4 Council & Decisiones Estratégicas.",
-  },
-  {
-    role: "Estrategia de Guerra",
-    members: ["Elite Tacticians"],
-    icon: Sword,
-    desc: "Planificación táctica de KvK y campo abierto.",
-  },
-  {
-    role: "Eventos & Logística",
-    members: ["Support Team"],
-    icon: Calendar,
-    desc: "Gestión de recompensas y operatividad.",
-  },
-];
-
 const Authorities: FC = () => {
+  const { t } = useTranslation();
+
+  const council = [
+    {
+      role: t('council.leadership'),
+      members: ["BADO", "YÜZBAŞI"],
+      icon: ShieldCheck,
+      desc: t('council.leadership_desc'),
+    },
+    {
+      role: t('council.the_council'),
+      members: ["HAKAN", "CROM", "BARBA"],
+      icon: MessageSquare,
+      desc: t('council.the_council_desc'),
+    },
+    {
+      role: t('council.war_strategy'),
+      members: ["Elite Tacticians"],
+      icon: Sword,
+      desc: t('council.war_strategy_desc'),
+    },
+    {
+      role: t('council.logistics'),
+      members: ["Support Team"],
+      icon: Calendar,
+      desc: t('council.logistics_desc'),
+    },
+  ];
+
   return (
     <section className="py-20 px-4 bg-gradient-to-t from-dark to-transparent">
       <div className="max-w-6xl mx-auto">
@@ -48,11 +51,11 @@ const Authorities: FC = () => {
           <h2 className="text-3xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
             THE{" "}
             <span className="text-royalGold gold-glow underline decoration-neonCyan/30 underline-offset-4">
-              IRON COUNCIL
+              {t('council.title').replace('THE ', '')}
             </span>
           </h2>
           <p className="text-slate-400 mt-4 uppercase text-sm tracking-widest">
-            El alto mando de los Lobos Oscuros
+            {t('council.subtitle')}
           </p>
         </motion.div>
 
@@ -100,11 +103,11 @@ const Authorities: FC = () => {
           className="mt-20 flex flex-col items-center"
         >
           <button className="flex items-center gap-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold py-5 px-12 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1 hover:shadow-indigo-500/50 uppercase tracking-widest text-lg">
-            ÚNETE AL DISCORD OFICIAL
+            {t('council.discord')}
             <ExternalLink className="w-6 h-6" />
           </button>
           <p className="mt-6 text-slate-500 text-xs tracking-widest uppercase">
-            © Kingdom 3664 • Dark Wolfs Dominion
+            {t('council.copyright')}
           </p>
         </motion.div>
       </div>
