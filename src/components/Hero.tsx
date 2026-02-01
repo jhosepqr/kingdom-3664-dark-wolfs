@@ -63,11 +63,11 @@ const Hero: FC = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="px-2"
         >
-          <h1 className="flex flex-col gap-2 md:gap-4 mb-8 md:mb-10 leading-none">
-            <span className="text-4xl md:text-9xl font-black italic tracking-tighter text-white drop-shadow-2xl">
+          <h1 className="flex flex-col gap-2 md:gap-3 mb-6 md:mb-8 leading-none">
+            <span className="text-4xl md:text-8xl font-black italic tracking-tighter text-white drop-shadow-2xl">
               DARK WOLFS
             </span>
-            <span className="text-gradient-gold gold-glow uppercase text-2xl md:text-7xl font-black italic tracking-tight leading-normal">
+            <span className="text-gradient-gold gold-glow uppercase text-xl md:text-5xl font-black italic tracking-tight leading-normal">
               {t("hero.subtitle")}
             </span>
           </h1>
@@ -78,9 +78,9 @@ const Hero: FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="relative max-w-2xl mx-auto mb-12 md:mb-16 px-4"
+          className="relative max-w-2xl mx-auto mb-8 md:mb-12 px-4"
         >
-          <p className="text-base md:text-2xl text-slate-300 font-light leading-relaxed italic uppercase tracking-wide">
+          <p className="text-sm md:text-xl text-slate-300 font-light leading-relaxed italic uppercase tracking-wide">
             {t("hero.description")}
           </p>
           <div className="absolute -left-2 md:-left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-neonCyan to-transparent opacity-50"></div>
