@@ -11,6 +11,7 @@ const Stats: FC = () => {
       icon: Shield,
       label: t("stats.power"),
       value: "+5,183M",
+      footer: t("stats.gift"),
       color: "text-neonCyan",
       shadow: "shadow-neonCyan/20",
     },
@@ -18,6 +19,7 @@ const Stats: FC = () => {
       icon: Trophy,
       label: t("stats.kvk4"),
       value: t("stats.kvk4_val"),
+      footer: t("stats.kvk_desc"),
       color: "text-royalGold",
       shadow: "shadow-royalGold/20",
     },
@@ -25,6 +27,7 @@ const Stats: FC = () => {
       icon: Star,
       label: t("stats.kvk5"),
       value: t("stats.kvk5_val"),
+      footer: t("stats.strat_desc"),
       color: "text-neonCyan",
       shadow: "shadow-neonCyan/20",
     },
@@ -32,6 +35,7 @@ const Stats: FC = () => {
       icon: Users,
       label: t("stats.migration"),
       value: t("stats.open"),
+      footer: t("stats.heavy"),
       color: "text-red-500",
       shadow: "shadow-red-500/20",
     },
@@ -73,9 +77,7 @@ const Stats: FC = () => {
                 {stat.value}
               </span>
               <p className="text-[10px] mt-2 text-slate-500 uppercase">
-                {stat.label === t("stats.migration")
-                  ? t("stats.heavy")
-                  : t("stats.gift")}
+                {stat.footer}
               </p>
             </motion.div>
           ))}

@@ -23,6 +23,9 @@ const resources = {
         kvk4_val: "Royal Triumph",
         kvk5_val: "Star Dominance",
         open: "OPEN (T5/ACTIVE)",
+        power_desc: "Elite Rank 1",
+        kvk_desc: "Heroic Anthem Winners",
+        strat_desc: "Strategy Masters",
       },
       council: {
         title: "THE IRON COUNCIL",
@@ -60,6 +63,9 @@ const resources = {
         kvk4_val: "Triunfo Real",
         kvk5_val: "Dominación Star",
         open: "ABIERTA (T5/ACTIVO)",
+        power_desc: "Rango Elite 1",
+        kvk_desc: "Ganadores Anthem Heroico",
+        strat_desc: "Maestros Estrategas",
       },
       council: {
         title: "EL CONSEJO DE HIERRO",
@@ -97,6 +103,9 @@ const resources = {
         kvk4_val: "Kraliyet Zaferi",
         kvk5_val: "Yıldız Hakimiyeti",
         open: "AÇIK (T5/AKTIF)",
+        power_desc: "Seçkin Kademe 1",
+        kvk_desc: "Kahramanlık Marşı Galibi",
+        strat_desc: "Strateji Ustaları",
       },
       council: {
         title: "DEMİR KONSEYİ",
@@ -134,6 +143,9 @@ const resources = {
         kvk4_val: "Королевский триумф",
         kvk5_val: "Звездное господство",
         open: "ОТКРЫТО (T5/АКТИВ)",
+        power_desc: "Элитный Ранг 1",
+        kvk_desc: "Победители Heroic Anthem",
+        strat_desc: "Мастера Стратегии",
       },
       council: {
         title: "ЖЕЛЕЗНЫЙ СОВЕТ",
