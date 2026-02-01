@@ -92,22 +92,21 @@ const Hero: FC = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="flex flex-col items-center gap-8 md:gap-10"
+          className="flex flex-col items-center gap-6"
         >
+          {/* Mobile Only CTA - Since fixed top-left is hidden on mobile for cleaner UI */}
           <motion.button
             onClick={() =>
               document
                 .getElementById("discord-section")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            whileHover={{ scale: 1.05, letterSpacing: "0.2em" }}
             whileTap={{ scale: 0.98 }}
-            className="group relative bg-royalGold text-dark font-black py-4 px-8 md:py-5 md:px-12 rounded-sm text-lg md:text-xl transition-all uppercase tracking-widest overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+            className="md:hidden group relative bg-royalGold text-dark font-black py-3 px-6 rounded-sm text-sm transition-all uppercase tracking-widest overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.3)] mb-4"
           >
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
             <span className="relative z-10 flex items-center gap-2">
               {t("hero.cta")}
-              <Zap className="w-5 h-5 fill-current" />
+              <Zap className="w-4 h-4 fill-current" />
             </span>
           </motion.button>
 
